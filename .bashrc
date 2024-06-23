@@ -16,3 +16,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
  
 bind '"\C-r": "\C-Usource $HOME/.bashrc\n\C-U\C-lneofetch\n"'
 bind '"\C-f": "fd --type=dir --max-depth=3 | fzf\n"'
+
+colors() {
+	for i in {0..255}; do
+		printf "\x1b[38;5;${i}mcolour${i}\n"
+	done
+}
